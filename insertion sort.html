@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//构造插入排序的算法
+		function insertSort(arr){
+			//第一步：分为两部分
+			//第一个部分：有序。第二部分：无序
+			for(var i=0;i<arr.length;i++){
+				if (arr[i]<arr[i-1]){
+					var temp = arr[i];
+					var j = i-1;
+					arr[i]=arr[j];					
+					while (temp <arr[j]&&j>=0){
+						arr[j+1]=arr[j];
+						j--;						
+					}
+					arr[j+1]=temp;
+				}
+			}
+		}
+		var arr = [12,99,78,56,1];
+		insertSort(arr);
+		console.log(arr);
+	</script>
+</body>
+</html>
