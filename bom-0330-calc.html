@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>计算器</title>
+	<style type="text/css">
+		div{
+			border: 1px solid #e00;
+		}
+		#result{
+			width: 200px;
+			height: 50px;
+			text-align: right;
+			overflow: hidden;
+		}
+		#container{
+			margin-top: 10px;
+			width: 198px;
+			overflow: hidden;
+		}
+		#container>div{
+			height: 30px;
+			width: 64px;
+			float: left;
+			text-align: center;
+			line-height: 30px;
+		}
+	</style>
+</head>
+<body>
+	<div id="result"></div>
+	<div id="container">
+		<div>1</div>
+		<div>2</div>
+		<div>3</div>
+		<div>4</div>
+		<div>5</div>
+		<div>6</div>
+		<div>7</div>
+		<div>8</div>
+		<div>9</div>
+		<div>0</div>
+		<div>+</div>
+		<div>-</div>
+		<div>*</div>
+		<div>/</div>
+		<div>=</div>
+	</div>
+	<script type="text/javascript">
+		var exp = '';
+		var result = document.getElementById('result');
+		document.getElementById('container').addEventListener('click',clickHandler,true);
+		function clickHandler(event){
+			if(event.target.innerHTML!="="){
+				exp+=event.target.innerHTML;
+				result.innerHTML=exp;
+			}else{
+				// eval可计算某个字符串，并且能执行字符串中的js代码
+				result.innerHTML=eval(exp);
+			}
+		}
+	</script>
+</body>
+</html>
