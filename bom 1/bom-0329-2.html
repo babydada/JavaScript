@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		*{
+			margin: 0px;
+			padding: 0px;
+			list-style: none;
+		}
+		#div1{
+			position: absolute;
+			width: 80px;
+			background-color: #f00;
+			border: 1px solid #0f0;
+			display: none;
+		}
+	</style>
+	<script type="text/javascript">
+		document.oncontextmenu=function(ev){
+			//浏览器兼容，避免获取右击时出现undefine
+			var oEvent=ev||event;
+			var oDiv=document.getElementById('div1');
+			oDiv.style.display='block';
+			oDiv.style.left=oEvent.clientX+'px';
+			oDiv.style.top=oEvent.clientY+'px';
+			return false;
+		}
+		document.onclick=function(){
+				var oDiv=document.getElementById('div1');
+				oDiv.style.display='none';
+		}
+	</script>
+</head>
+<body>
+	<div id="div1">
+		<ul>
+			<li>aaa</li>
+			<li>bbb</li>
+			<li>ccc</li>
+		</ul>
+	</div>
+</body>
+</html>

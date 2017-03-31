@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title></title>
+	<style type="text/css">
+		div>ul>li>div{
+			width: 250px;
+			height: 250px;
+			position: relative;
+			text-align: center;
+			line-height: 250px;
+		}
+		*{
+			margin: 0px;
+			padding: 0px;
+		}
+		ul{
+			list-style: none;
+		}
+		.container{
+			width: 250px;
+			height: 250px;
+			position: absolute;
+		}
+		.images>li{
+			position: absolute;
+			opacity: 0;
+		}
+		.images>li:first-child{
+			opacity: 1;
+		}
+		.nav{
+			position: absolute;
+			right: 10px;
+			bottom: 5px;
+			z-index: 1;
+		}
+		.nav>li{
+			float: left;
+			width: 40px;
+			height: 6px;
+			background-color: #000;
+			opacity: 6;
+			margin-right: 3px;
+		}
+		.nav>li.active{
+			background-color: #aaa;
+		}
+	</style>
+</head>
+<body>
+	<div class="container">
+		<ul class="images">
+			<li><div style="background-color: #f00;">图片1</div></li>
+			<li><div style="background-color: #00f;">图片2</div></li>
+			<li><div style="background-color: #0f0;">图片3</div></li>
+			<li><div style="background-color: #f0f;">图片4</div></li>
+			<li><div style="background-color: #ff0;">图片5</div></li>
+		</ul>
+		<ul class="nav">
+			<li class="active"></li>
+			<li></li>
+			<li></li>
+			<li></li>
+			<li></li>
+		</ul>
+	</div>
+	<script type="text/javascript">
+		var currentIndex = 0;
+		var autotimer = setInterval(function(){
+			//获取图片列表
+            var images = document.querySelector('.images');
+            //索引值
+            var nextIndex = currentIndex!=4?currentIndex+1:0;
+            //显示第一张图片
+            var current = images.children[currentIndex];
+            //使得当前的图片消失
+            var fadeOut = setInterval(function(){
+                var opacity = parseFloat(getComputedStyle(current).opacity);
+                if(opacity>1){
+                	opacity-=0.1;
+                	current.style.opacity=opacity;
+                }else{
+                	clearInterval(fadeOut);
+                	fadeOut = null;
+                }
+            },300);
+            //让剩下的图片出现
+            var next = images.children[nextIndex];
+            //让图片逐渐显示
+            var fadein = setInterval(function(){
+                var opacity = parseFloat(getComputedStyle(next).opacity);
+                if(opacity<1){
+                	opacity+=0.1
+                	next.style.opacity=opacity;
+                }else{
+                	clearInterval(fadein);
+                	fadein = null;
+                }
+            },300);
+            var nav = document.querySelector('.nav');
+            nav.children[currentIndex].className="";
+            nav.children[nextIndex].className="active";
+            currentIndex=nextIndex;
+		},3000)
+	</script>
+</body>
+</html>
