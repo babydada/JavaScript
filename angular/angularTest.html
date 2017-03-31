@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html ng-app="demoApp">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <title>demo</title>
+  <link rel="stylesheet" href="demo.css">
+</head>
+<body>
+  <div ng-controller="demoCtrl">
+    <div>
+      <ul>
+        <li ng-repeat="sentences in demoLists[0].name | paging:currentPage*listsPerPage | limitTo:listsPerPage">{{sentences}}</li>  <!-- ng-repeat 动态生成模拟的数据 -->
+      </ul>
+    </div>
+    <div>
+      <a class="step prevLink" ng-click="prevPage()">上一页</a>
+      <a ng-class="{true:'currentStep',false:'step'}[num==currentPage]" ng-repeat="num in pageNum" ng-click="setPage(num)">{{num+1}}</a>  <!-- ng-repeat 动态生成页码 -->
+      <a class="step nextLink" ng-click="nextPage()">下一页</a>
+    </div>
+  </div>
+  <script src="angular.min.js"></script>  <!-- 引入你的 angularJs 文件 -->
+  <script src="demo.js"></script>
+</body>
+</html>
