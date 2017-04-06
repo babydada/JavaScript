@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<script type="text/javascript">
+		//闭包的用途
+		//Getter和Setter
+		var getValue,setValue;
+		//自调函数
+		(function(){
+			var age = 16;
+			getValue=function(){
+				return age+'岁';
+			}
+			setValue = function(v){
+				//刚刚function()的括号中没有v的时候显示错误：v未被定义
+				age = v;
+			}
+		})();
+		alert('年纪是'+getValue());
+		setValue(8);
+		alert('把年龄变为'+getValue());
+	</script>
+</body>
+</html>
