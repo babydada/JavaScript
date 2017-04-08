@@ -1,0 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>2048</title>
+	<link rel="stylesheet" type="text/css" href="style.css">
+</head>
+<body>
+<table id="control">
+	<tr>
+		<td></td>
+		<td><input type="button" name="" value="上" id="Upbtn"></td>
+		<td></td>
+	</tr>
+	<tr>
+		<td><input type="button" name="" value="左" id="Leftbtn"></td>
+		<td></td>
+		<td><input type="button" name="" value="右" id="Rightbtn"></td>
+	</tr>
+	<tr>
+		<td></td>
+		<td><input type="button" name="" value="下" id="Downbtn"></td>
+		<td></td>
+	</tr>
+</table>
+
+
+
+	<header><h1>2048</h1></header>
+	<!-- 游戏面板 -->
+	<div id="gamePanel">
+		<p>
+			<a class="button" id="newgame">NewGame</a>
+			分数:<span id="score">0</span>
+		</p>
+              <div id="girdPanel">
+              	<div class="grid"></div>
+              	<div class="grid"></div>
+              	<div class="grid"></div>
+              	<div class="grid"></div>
+              	<div class="grid"></div>
+              	<div class="grid"></div>
+              	<div class="grid"></div>
+              	<div class="grid"></div>
+              	<div class="grid"></div>
+              	<div class="grid"></div>
+              	<div class="grid"></div>
+              	<div class="grid"></div>
+              	<div class="grid"></div>
+              	<div class="grid"></div>
+              	<div class="grid"></div>
+              	<div class="grid"></div>
+              	<!--带数字 的格子 -->
+              	<div class="cell num2" id="cell00">2</div>
+              	<div class="cell num4" id="cell01">4</div>
+              	<div class="cell num8" id="cell02">8</div>
+              	<div class="cell num16" id="cell03">16</div>
+              	<div class="cell num32"  id="cell10">32</div>
+              	<div class="cell num64"  id="cell11">64</div>
+              	<div class="cell num128" id="cell12">128</div>
+              	<div class="cell num256" id="cell13">256</div>
+              	<div class="cell num512" id="cell20">512</div>
+              	<div class="cell num1024" id="cell21">1024</div>
+              	<div class="cell num2048" id="cell22">2048</div>
+              	<div class="cell num4096" id="cell23">4096</div>
+              	<div class="cell num8192" id="cell30">8192</div>
+              	<div class="cell" id="cell31"></div>
+              	<div class="cell" id="cell32"></div>
+              	<div class="cell" id="cell33"></div>
+              </div>	
+              <div id="Gameover">
+              		<p >
+              			GameOver!
+              			<br>
+              			分数:<span id="finalscore">0</span><br>
+              			<a class="button" id="restart">再来一次</a>
+              		</p>
+              </div>
+	</div>
+	<script type="text/javascript" src="game.js"></script>
+	   <script type="text/javascript" language=JavaScript charset="UTF-8">
+document.onkeydown=function(event){
+var e = event || window.event || arguments.callee.caller.arguments[0];
+if(e && e.keyCode==37){ // 按 Esc 
+//要做的事情
+Leftaction();
+}
+if(e && e.keyCode==38){ // 按 F2 
+//要做的事情
+Upaction();
+} 
+if(e && e.keyCode==39){ // 按 F2 
+//要做的事情
+Rightaction();
+} 
+if(e && e.keyCode==40){ // enter 键
+Downaction();
+}
+}; 
+</script>
+</body>
+</html>
