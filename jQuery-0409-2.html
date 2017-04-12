@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+</head>
+<body>
+	<div id="d1"></div>
+	<div id="d2"></div>
+	<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+	<script type="text/javascript">
+		$('#d1').html('我是d1');
+		var d2 = document.getElementById('d2');
+		var $d2 = $(d2);
+		$d2.click(function(){
+			console.log('这里使用jQuery的监听事件，它不存在兼容问题。');
+		});
+		//传递html元素给jQuery对象
+		var $span = $('<span style="color:#f00">这是一个span</span>');
+		$d2.html($span);
+		var $obj = $('#d1');
+		//get(index)方法，得到相应的dom对象
+		//jQuery对象是一个数组对象，指定index来得到相应的DOM对象
+		var obj =  $obj.get(0);
+		obj.innerHTML='hello jQuery';
+		//自调函数,
+		(function(){
+			alert('ok');
+		})();
+		//传递方法给$();window.onload=function(){}
+		$(function(){
+			alert('ok too');
+		})
+	</script>
+	<script type="text/javascript">
+		(function(){
+			alert('ok');
+		})
+	</script>
+</body>
+</html>
