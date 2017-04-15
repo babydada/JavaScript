@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		ul>li{
+			float: left;
+			list-style-type: none;
+			font-size: 12px;
+			width: 150px;
+		}
+		img{
+			margin: 0 auto;
+			display: block;
+		}
+		.bgcolor{
+			background: #f00;
+		}
+	</style>
+	<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+</head>
+<body>
+	<input type="text" />
+	<button>搜索</button>
+	<ul>
+	  <li>
+	  	<img src="1.jpg"/><br />
+	  	<a href="#">罗蒙男士纯棉短袖衬衫</a>
+	  	<br />
+	  	<span>￥159.00</span>
+	  </li>
+	  <li>
+	 	 <img src="2.jpg"/><br />
+	 	 <a href="#">思莱德SELECTED含亚麻修身男士衬衫</a>
+	 	 <br />
+	 	 <span>￥159.00</span>
+	  </li>
+	  <li>
+	  	<img src="3.jpg"/><br />
+	  	<a href="#">TOMMY HILFIGER 品牌简约经典款短袖POLO衫</a>
+	  	<br />
+	  	<span>￥159.00</span>
+	  </li>
+	  <li>
+	  	<img src="4.jpg"/><br />
+	  	<a href="#">唐狮 男基本牛仔双袋休闲长袖衬衫</a>
+	  	<br />
+	  	<span>￥159.00</span>
+	  </li>
+	</ul>
+	<script type="text/javascript">
+		$('button').click(function(){
+			var txt = $('input').val();
+			var $links = $('a');
+			for(var i = 0;i<$links.length;i++){
+				//indexOf()可以返回某个指定的字符串值在字符串中首次出现的值
+				
+					if($($links[i]).text().toLowerCase().indexOf(txt.toLowerCase())!=-1&&txt!=""){
+						$($links[i]).parent().removeClass('bgcolor');
+						$($links[i]).parent().addClass('bgcolor');
+					}else{
+						
+							$($links[i]).parent().removeClass('bgcolor');
+						
+					}
+			}
+		});
+	</script>
+</body>
+</html>
