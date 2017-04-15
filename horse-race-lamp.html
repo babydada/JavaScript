@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>跑马灯效果</title>
+	<style type="text/css">
+     body{
+     	/*页面背景色*/
+     	background-color: #fff;
+     } 
+     /*设置输入框*/
+     input{
+     	background-color: #fff;/*输入框背景透明*/
+     	color: #ffb400;
+     	font-size: 45px;
+     	font-weight: bold;
+     	font-family: "黑体";
+      }
+	</style>
+
+</head>
+<body onload="scroll()">
+   <form name="outbar">
+    <input type="text" name="loginForm">
+   </form>
+
+<script type="text/javascript">
+   var msg="欢迎来到我的github";//移动文字
+   var sub=0;//设置文字下标
+   function scroll(){
+    var form=document.forms.outbar;//获取表单
+     form.loginForm.value=msg.slice(sub,msg.length)+" "+msg;//将字符串赋值给INPUT
+   	 sub++;
+    //判断下标
+   	if(sub>msg.length)
+       {
+   		  sub=0;
+       }
+   		setTimeout("scroll()",500);
+   	}
+</script>	
+</body>
+</html>
