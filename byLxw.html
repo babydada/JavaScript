@@ -1,0 +1,140 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style>
+		*{
+			margin: 0;
+			padding: 0;
+		}
+		body{
+			height: 3500px;
+		}
+		a{
+			text-decoration: none;
+		}
+		ul{
+			list-style: none;
+			position: fixed;
+			top: 200px;
+			display: none;
+		}
+		li{
+			width: 50px;
+			height: 50px;
+			line-height: 50px;
+			border: 1px solid #0ff;
+		}
+		div{
+			margin: 0 auto;
+		}
+		.header{
+			width: 200px;
+			height: 500px;
+			background-color: #f00;
+		}
+		.floor1{
+			width: 200px;
+			height: 500px;
+			background-color: #0f0;
+		}
+		.floor2{
+			width: 200px;
+			height: 500px;
+			background-color: #00f;
+		}
+		.floor3{
+			width: 200px;
+			height: 500px;
+			background-color: #f00;
+		}
+		.floor4{
+			width: 200px;
+			height: 500px;
+			background-color: #000;
+		}
+		.footer{
+			width: 200px;
+			height: 500px;
+			background-color: #ccc;
+		}
+	</style>	
+</head>
+<body>
+	<ul id="d1" >		
+		<a href="#a1"><li>floor1</li></a>
+		<a href="#a2"><li>floor2</li></a>
+		<a href="#a3"><li>floor3</li></a>
+		<a href="#a4"><li>floor4</li></a>
+		<a href="#a5"><li>footer</li></a>
+		<a href="#"><li>回顶部</li></a>
+	</ul>
+	<div class="header">header</div>
+	<div class="floor1" >floor1</div>
+	<div class="floor2" >floor2</div>
+	<div class="floor3" >floor3</div>
+	<div class="floor4" >floor4</div>
+	<div class="footer" >footer</div>
+	<script type="text/javascript">
+	// 获取ul
+	var d1=document.getElementById('d1');
+	// 获取li
+	var oLi = d1.getElementsByTagName('li');
+	// 滚轮滚动事件
+	window.onscroll = function () { 
+		// 滚轮距离顶部高度
+ 		var t =document.body.scrollTop;
+ 		var x=parseInt(t/500);
+ 		// 判断显示
+ 		switch(x){
+ 			case 0:d1.style.display='none';
+ 			break;
+ 			case 1:d1.style.display='block';
+ 			console.log(x);
+ 			for(var i=0;i<oLi.length;i++){
+ 			oLi[i].style.background = '#fff';	
+ 			}
+ 			oLi[0].style.background = '#f00';	
+ 			break;
+ 			case 2:d1.style.display='block';
+ 			console.log(x);
+ 			for(var i=0;i<oLi.length;i++){
+ 			oLi[i].style.backgroundColor = '#fff';
+ 			}
+			oLi[1].style.backgroundColor = '#0f0';
+ 			break;
+ 			case 3:d1.style.display='block';
+ 			console.log(x);
+ 			for(var i=0;i<oLi.length;i++){
+ 			oLi[i].style.backgroundColor = '#fff';	
+ 			}
+			oLi[2].style.backgroundColor = '#00f'; 	
+ 			break;
+ 			case 4:d1.style.display='block';
+ 			console.log(x);
+ 			for(var i=0;i<oLi.length;i++){
+ 			oLi[i].style.backgroundColor = '#fff'; 	
+ 			}
+ 			oLi[3].style.backgroundColor = '#ccc';	
+ 			break;
+ 			case 5:d1.style.display='block';
+ 			console.log(x);
+ 			for(var i=0;i<oLi.length;i++){
+ 			oLi[i].style.backgroundColor = '#fff';	
+ 			}
+ 			oLi[4].style.backgroundColor = '#ff0';	
+ 			break;
+ 		} 		
+	}	
+	// 设置跳转
+    for (var j=0;j<oLi.length;j++) {
+    	oLi[j].index=j+1;
+    	oLi[j].onclick=function(){
+    		document.body.scrollTop=this.index*500;
+    		// window.scrollTo(0,this.index*500);
+    	}
+    }	
+	</script>
+</body>
+</html>
