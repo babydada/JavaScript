@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		div{
+			width: 100px;
+			height: 100px;
+			background-color: #f00;
+		}
+	</style>
+</head>
+<body>
+	<div id="d1">AAA</div>
+	<button>hide</button>
+	<button>show</button>
+	<button>toggle</button>
+	<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+	<script type="text/javascript">
+		$('button').click(function(){
+			if(this.innerHTML=='hide'){
+				$('#d1').hide('slow',function(){
+				})
+			}else if(this.innerHTML=='show'){
+				$('#d1').show(3000);
+			}else if(this.innerHTML=='toggle'){
+				$('#d1').toggle(2000);//两种状态，点一下隐藏，再点一下显示
+			}
+		});
+	</script>
+	<div id="d2">BBB</div>
+	<button>slideDown</button>
+	<button>slideUp</button>
+	<script type="text/javascript">
+		$('button').click(function(){
+			if(this.innerHTML=='slideDown'){
+				$('#d2').slideDown('slow',function(){
+				});
+			}else if(this.innerHTML=='slideUp'){
+				$('#d2').slideUp('slow');
+			}
+		});
+	</script>
+	<div id="d3">CCC</div>
+	<button>fadeIn</button>
+	<button>fadeOut</button>
+	<button>fadeToggle</button>
+	<button>fadeTo</button>
+	<input type="number" min="0" max="1" step="0.1">
+	<script type="text/javascript">
+		$('button').click(function(){
+			if(this.innerHTML=='fadeIn'){
+				$('#d3').fadeIn('slow')
+			}else if(this.innerHTML=='fadeOut'){
+				$('#d3').fadeOut(3000);
+			}else if(this.innerHTML=='fadeToggle'){
+				$('#d3').fadeToggle(2000);
+			}else if(this.innerHTML=='fadeTo'){
+				$('#d3').fadeTo('normal',$('input').val());
+			}
+		});
+	</script>
+</body>
+</html>
