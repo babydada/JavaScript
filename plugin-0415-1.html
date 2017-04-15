@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<!-- 1:引入jQuery和日历插件 -->
+	<script src="http://code.jquery.com/jquery-latest.js"></script>
+	<script type="text/javascript" src="datepicker/WdatePicker.js"></script>
+</head>
+<body>
+	<h2>日历插件的使用</h2>
+	<hr>
+	<fieldset>
+		<legend>默认日历</legend>
+		<input type="text" id="d1" class="Wdate">
+	</fieldset>
+	<fieldset>
+		<legend>日历属性</legend>
+		<input type="text" id="d2" class="Wdate">
+	</fieldset>
+	<fieldset>
+		<legend>日历限制范围</legend>
+		<input type="text" id="d3" class="Wdate">
+	</fieldset>
+	<fieldset>
+		<legend>测试</legend>
+		<input type="text" id="d4" class="Wdate">
+		<input type="text" id="d5" class="Wdate">
+	</fieldset>
+	<script type="text/javascript">
+		$('#d1').focus(function(){
+			WdatePicker();
+		});
+		$('#d2').focus(function(){
+			WdatePicker({
+				//指定控件的id，存储日期显示值
+				el:'d2',
+				//制定日期显示格式
+				dataFmt:'yyyy-MM-dd HH:mm:ss',
+				//双日历的实现
+				doubleCalendar:true,
+				//显示周
+				isShoWWeek:true,
+			});
+		});
+		$('#d3').focus(function(){
+			//传递配置对象
+			WdatePicker({
+				doubleCalendar:true,
+				minDate:new Date(),
+				//指定在今天的基础上加上59天
+				//然后加上一年的有三种方法
+				//maxDate:'%y-%M-{%d+365}'
+				//maxDate:'{%y+1}-%M-%d'
+				//maxDate:'%y-{%M+12}-%d'
+				maxDate:'%y-%M-{%d+59}',
+			});
+		});
+		$('#d4').focus(function(){
+			WdatePicker({
+				doubleCalendar:true,
+				//dp:事件对象
+				onpicking:function(dp){
+					if(confirm('确认选择'+dp.cal.getNewDateStr()+'?')){
+						return false;
+					}
+				}
+			});
+		});
+		$('#d5').focus(function(){
+			WdatePicker({
+				doubleCalendar:true,
+				//最小时间
+				//#F;执行函数
+				//$dp:事件对象
+				//$D:构造时间
+				minDate:"#F{$dp.$D('d4',{d:3})}",
+			});
+		})
+	</script>
+</body>
+</html>
