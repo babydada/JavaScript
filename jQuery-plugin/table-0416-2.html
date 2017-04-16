@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+	<script type="text/javascript" src="jquery-tmpl/jquery.tmpl.js"></script>
+</head>
+<body>
+	<button id="add">新增学员</button>
+	<table id="studentList">
+		<thead>
+			<tr>
+				<td>ID</td>
+				<td>姓名</td>
+				<td>院系</td>
+				<td>班级</td>
+				<td>年龄</td>
+				<td>操作</td>
+			</tr>
+		</thead>
+		<tbody></tbody>
+	</table>
+	<form style="display: none;" id="addStudent">
+		<input type="text" id="id">
+		<input type="text" id="sname">
+		<input type="text" id="collage">
+		<input type="text" id="className">
+		<input type="text" id="age">
+		<input type="button" value="新增学员" id="btnAdd">
+	</form>
+	<!-- 创建模板 -->
+	<script id="myTmpl" type="text/x-jquery-tmpl">
+		<tr>
+			<td>${id}</td>
+			<td>${sname}</td>
+			<td>${college}</td>
+			<td>${className}</td>
+			<td>${age}</td>
+			<td>
+				<button>删除</button>
+			</td>
+		</tr>
+	</script>
+	<script type="text/javascript">
+		var data = [
+			{id:'10001',sname:'小珠',college:'计科',className:'131',age:20},
+			{id:'10002',sname:'小光',college:'计科',className:'131',age:20},
+			{id:'10003',sname:'小涛',college:'计科',className:'131',age:20},
+			{id:'10004',sname:'小丽',college:'计科',className:'131',age:20},
+			{id:'10005',sname:'小阳',college:'计科',className:'131',age:20}
+		];
+		//使用模板
+		$('#myTmpl').tmpl(data).appendTo('#studentList>tbody').find('button').click(function(){
+			//删除方法
+			//使用$.tmplitem(this)来获取当前模板的jQuery对象
+			var item = $.tmplItem(this);
+			item.nodes[0].remove();
+		});
+		//拿到页面上的新增、学院按钮
+		$('#add').click(function(){
+			$('#addStudent').show();
+		});
+		$('#btnAdd').click(function(){
+			var newStu = {};
+			newStu.id=$('#id').val();
+			newStu.sname=$('#sname').val();
+			newStu.collage=$('#collage').val();
+			newStu.className=$('#className').val();
+			newStu.age=$('#age').val();
+			//添加到data数据中
+			data.push(newStu);	
+			//添加到表格中
+			$('#myTmpl').tmpl(newStu).appendTo('#studentList>tbody').find('button').click(function(){
+				var item = $.tmplItem(this);
+				item.nodes[0].remove();
+			});
+		});
+		
+	</script>
+</body>
+</html>

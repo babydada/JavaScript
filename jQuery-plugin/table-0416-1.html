@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+	<script type="text/javascript" src="jquery-tmpl/jquery.tmpl.js"></script>
+</head>
+<body>
+	<table>
+		<thead></thead>
+		<tr>
+			<td>id</td>
+			<td>姓名</td>
+			<td>年龄</td>
+		</tr>
+	</table>
+	<tbody></tbody>
+		<!-- 创建格式模板 -->
+	<!-- 此时的type必须是这个type="text/x-jquery-tmpl" -->
+	<script id="myTmpl" type="text/x-jquery-tmpl">
+		<tr>
+			<td>${id}</td>
+			<td>${name}</td>
+			<td>${age}</td>
+		</tr>
+	</script>
+	<script type="text/javascript">
+		var data = [
+			{id:'101',name:'Tom',age:20},
+			{id:'102',name:'Mary',age:22},
+			{id:'103',name:'Lily',age:21},
+			{id:'104',name:'Angel',age:25},
+			{id:'105',name:'Nacy',age:23},
+		];
+		//创建模板
+		var tmpl = '<tr><td>${id}</td><td>${name}</td><td>${age}</td></tr> ';
+		//使用模板
+		// $('#myTmpl').tmpl(data).appendTo('table>tbody');
+		
+		$.tmpl(tmpl,data).appendTo('table>tbody');
+	</script>
+</body>
+</html>

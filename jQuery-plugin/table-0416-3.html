@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<style type="text/css">
+		.red{
+			color: #f00;
+		}
+	</style>
+	<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+	<script type="text/javascript" src="jquery-tmpl/jquery.tmpl.js"></script>
+</head>
+<body>
+	<ul id="moviesList">
+	</ul>
+	<script id="myTmpl" type="text/x-jquery-tmpl" id="myTmpl">
+		<li>
+			${Name}
+			导演：<span class="red">${Director}</span>
+			{%if Language %} 可选语言：${Language}
+			{%elseif Subtitles %} 原版语言：${Subtitles}
+			{%else%} 只有原版，没有其他翻译
+			{%/if%}
+			<p>{%html Detail%}</p>
+		</li>
+	</script>
+	<script type="text/javascript">
+		var movies = [
+		{
+			Name:'终结者2',
+			Director:'斯皮尔伯格',
+			Detail:'<img src=""/><b>世界末日到来了！</b>',
+			Language:'English',
+			Subtitles:'Chinese'
+		},
+		{
+			Name:'终结者3',
+			Director:'斯皮尔伯格',
+			Detail:'<img src=""/><b>世界末日如何阻止！</b>',
+			Subtitles:'English'
+		},
+		{
+			Name:'终结者4',
+			Director:'XXX',
+			Detail:'<img src=""/><b>烂片！</b>'
+		},
+		{
+			Name:'终结者创世纪',
+			Director:'XXX',
+			Detail:'<img src=""/><b>依然烂片！</b>',
+			Language:'English'
+		}
+	];
+	$('#myTmpl').tmpl(movies).appendTo('#moviesList');
+	</script>	
+</body>
+</html>
