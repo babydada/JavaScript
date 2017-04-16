@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<script type="text/javascript" src="jquery-3.2.0.min.js"></script>
+	<script type="text/javascript" src="zTree_v3-master/js/jquery.ztree.all.js"></script>
+	<link rel="stylesheet" type="text/css" href="zTree_v3-master/css/zTreeStyle/zTreeStyle.css">
+</head>
+<body>
+	<ul id="tree1" class="ztree"></ul>
+	<script type="text/javascript">
+		var zNodes = [//数据
+			{id:1,pId:0,name:'展开、折叠 自定义图标不同',open:true,iconOpen:'zTree_v3-master/css/zTreeStyle/img/diy/1_open.png',iconClose:'zTree_v3-master/css/zTreeStyle/img/diy/1_close.png'},
+			{id:11,pId:1,name:'叶子节点1',icon:'zTree_v3-master/css/zTreeStyle/img/diy/2.png'},
+			{id:12,pId:1,name:'叶子节点1',icon:'zTree_v3-master/css/zTreeStyle/img/diy/3.png'},
+			{id:13,pId:1,name:'叶子节点1',icon:'zTree_v3-master/css/zTreeStyle/img/diy/4.png',click:false}
+		];
+		var $tree = $('#tree1');
+		var setting = {
+			data:{
+				simpleData:{
+					enable:true
+				}
+			},
+			callback:{
+				onclick:function(event,treeId,treeNode,clickFlag){
+					console.log(treeNode,name);
+				}
+			}
+		};
+		$.fn.zTree.init($tree,setting,zNodes);
+	</script>
+</body>
+</html>
