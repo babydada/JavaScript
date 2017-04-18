@@ -1,0 +1,71 @@
+html{color:#000;background:#FFF}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}
+legend{color:#000}
+#yui3-css-stamp.cssreset{display:none}
+
+/*正文开始*/
+body,html{ width: 98%; height: 98%; background-color: #eee; border: 1px solid #eee;}
+.sankeBox{
+	width: 700px;
+	height: 400px;
+	background: #ddd url(bg.png);
+	border: 1px solid #fff;
+	margin:100px auto 20px;
+	position:relative;
+	/*overflow: hidden;*/
+}
+.sankeBox span{
+	font-size: 100px;
+	color:#fff;
+	text-align: center;
+	line-height: 400px;
+    margin-left: 50px;
+    background-color: #ddd;
+}
+.sankeBox div{
+	width: 20px;
+	height: 20px;
+	border-radius: 7px;
+	position: absolute;
+	background-color: #f00;
+}
+.keyBox{
+	width: 700px;
+	height: 60px;
+	margin: 0 auto;
+}
+.keyBox div{
+	float: left;
+	width: 165px;
+	height: 60px;
+	box-sizing: border-box;
+	border: 3px solid #fff;
+	margin-right: 13px;
+	line-height: 54px;
+	text-align: center;
+	cursor: pointer;
+	font-size: 20px;
+	font-weight: 800;
+	color: #fff;      
+    user-select:none;   
+}
+.keyBox .score{
+	margin: 0;
+	cursor: text;
+	text-align: left;
+	padding-left: 20px;
+}
+.keyBox .score span{
+	color: #f66;
+}
