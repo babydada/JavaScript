@@ -1,0 +1,131 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>股票api接口</title>
+</head>
+<body>
+    <!--柱状图容器-->
+    <canvas id="myCanvas3"width="1000" height="700"></canvas>
+    <script src="Chart.js"></script>
+    <script type="text/javascript" src="http://libs.baidu.com/jquery/1.9.1/jquery.min.js"></script>
+    <script type="text/javascript">
+        var shuzu = [];
+        var shuzunew=[];
+        var shuzu2 = [];
+        var shuzu2new=[];
+        var shuzu3 = [];
+        var shuzu3new = [];
+        function formatterDateTime() {
+            var date=new Date()
+            var month=date.getMonth() + 1
+            var datetime = date.getFullYear()
+                + ""// "年"
+                + (month >= 10 ? month : "0"+ month)
+                + ""// "月"
+                + (date.getDate() < 10 ? "0" + date.getDate() : date
+                    .getDate())
+                + ""
+                + (date.getHours() < 10 ? "0" + date.getHours() : date
+                    .getHours())
+                + ""
+                + (date.getMinutes() < 10 ? "0" + date.getMinutes() : date
+                    .getMinutes())
+                + ""
+                + (date.getSeconds() < 10 ? "0" + date.getSeconds() : date
+                    .getSeconds());
+            return datetime;
+        }
+        $.ajax({
+            type:'post',
+            url:'http://route.showapi.com/105-32',
+            dateType:'json',
+            data:{
+                "showapi_timestamp":formatterDateTime(),
+                "showapi_appid":'38907',
+                "showapi_sign":'88c543bbb8854faabadb50190e261b18',
+                "bankCode":'ICBC',
+            },
+            jsonp:'jsonpcallback',
+            error:function(XmlHttpRequest,textStatus,errorThrown){
+                alert('操作失败');
+            },
+            success:function(result){
+                for(num in result.showapi_res_body.codeList) {
+                    var arroneValue = result.showapi_res_body.codeList[num];
+                    var arroneValueName = result.showapi_res_body.codeList[num].name;
+                    var arroneValueHui = +result.showapi_res_body.codeList[num].hui_in;
+                    var arroneValueMid = result.showapi_res_body.codeList[num].mid_price;
+                    shuzu.push(arroneValueName);
+                    shuzunew=shuzu.slice(0,15);
+                    shuzu2.push(arroneValueHui);
+                    shuzu2new = shuzu2.slice(0,15);
+                    shuzu3.push(arroneValueMid);
+                    shuzu3new = shuzu3.slice(0,15);
+                }
+                    //获取画布
+                    var bar = document.getElementById('myCanvas3').getContext('2d');
+                    //创建chart对象
+                    var BarChart = new Chart(bar);
+                    //绘制图形所需要的数据
+                    var data = {
+                        //x轴
+                        labels:shuzunew,
+                        datasets:[
+                            {
+                                fileColor:"#f14e95",
+                                strokeColor : "rgba(220,220,220,1)",
+                                data :shuzu2new,
+                            },
+
+                        ]
+                    }
+                    BarChart.Bar(data,{
+                        // Y/X轴的颜色
+                        scaleLineColor : "rgba(0,0,0,.1)",
+                        // X,Y轴的宽度
+                        scaleLineWidth : 1,
+                        // 刻度是否显示标签, 即Y轴上是否显示文字
+                        scaleShowLabels : false,
+                        // Y轴上的刻度的单位
+                        scaleLabel : "<%=value%>",
+                        // 字体
+                        scaleFontFamily : "'Arial'",
+                        // 文字大小
+                        scaleFontSize : 5,
+                        // 文字样式
+                        scaleFontStyle : "normal",
+                        // 文字颜色
+                        scaleFontColor : "#f14e95",
+                        // 是否显示网格
+                        scaleShowGridLines : true,
+                        //网格颜色
+                        scaleGridLineColor : "rgba(0,0,0,.05)",
+                        // 网格宽度
+                        scaleGridLineWidth : 1,
+                        //是否绘制柱状条的边框
+                        barShowStroke : true,
+                        //柱状条边框的宽度
+                        barStrokeWidth : 2,
+                        //柱状条组之间的间距(过大或过小会出现重叠偏移错位的效果，请控制合理数值)
+                        barValueSpacing : 5,
+                        //每组柱状条组中柱状条之间的间距
+                        barDatasetSpacing : 1,
+                        // 是否执行动画
+                        animation : true,
+                        // 执行动画的时间
+                        animationSteps : 60,
+                        //动画特效
+                        animationEasing : "easeOutQuart",
+                        //回调
+                        onAnimationComplete : null
+                    });
+
+
+
+
+            }
+        });
+    </script>
+</body>
+</html>
