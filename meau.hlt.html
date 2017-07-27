@@ -1,0 +1,99 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>二级菜单</title>
+	<style type="text/css">
+		body,h1,h2,h3,h4,h5,h6,hr,p,blockquote,dl,dt,dd,ul,ol,li,pre,form,fieldset,legend,button,input,textarea,th,td  {margin:0;padding:0;}body,button,input,select,textarea{font:12px/1.5     tahoma,arial,\5b8b\4f53;}h1,h2,h3,h4,h5,h6{font-size:100%;}address,cite,dfn,em,var{font-style:normal;}code,kbd,pre,samp{font-family:courier new,courier,monospace;}small{font-size:12px;}ul,ol{list-style:none;}a{text-decoration:none;}a:hover{text-decoration:underline;}sup{vertical-align:text-top;}sub{vertical-align:text-bottom;}legend{color:#000;}fieldset,img{border:0;}button,input,select,textarea{font-size:100%;}table{border-collapse:collapse;border-spacing:0;}
+		a{cursor: pointer; text-decoration: none;}a:hover{ text-decoration: none;}
+		.meau-div{
+			width: 100%;
+			height: auto;
+			background-color: #ee0;
+			display: inline-block;
+			font-size: 22px;
+		}
+		.meau-div>ul{
+			width: 100%;
+			height: auto;
+			margin-left: 240px;
+			position: relative;
+		}
+		.meau-div>ul>li{
+			width: 180px;
+			height: auto;
+			text-align: center;
+			display: inline-block;
+		}
+		.meau-div>ul>li>ul{
+			position: absolute;
+			border: 1px solid #000;
+			width: 180px;
+			text-align: center;
+		}
+		.meau-div>ul>li>a:hover ul{
+			display: block;
+		}
+		.meau-kid{
+			display: none;
+		}
+		.meau-div > ul > li:hover ul {
+	        display: block;
+	        background-color: #off;
+	    }
+	    @media screen and (max-width: 900px){
+	    	.meau-div>ul{
+	    		margin-left: 50px;
+	    	}
+	    	.meau-kid{
+	    		z-index: 555;
+	    		background-color: #f00;
+	    	}
+	    }
+	</style>
+</head>
+<body>
+	<nav>
+		<div class="meau-div">
+			<ul>
+				<li>
+					<a href="">第一菜单</a>
+					<ul class="meau-kid">
+						<li>一一</li>
+						<li>一二</li>
+					</ul>
+				</li>
+				<li>
+					<a href="">第二菜单</a>
+					<ul class="meau-kid">
+						<li>二一</li>
+						<li>二二</li>
+					</ul>
+				</li>
+				<li>
+					<a href="">第三菜单</a>
+					<ul class="meau-kid">
+						<li>三一</li>
+						<li>三二</li>
+					</ul>
+				</li>
+				<li>
+					<a href="">第四菜单</a>
+					<ul class="meau-kid">
+						<li>四一</li>
+						<li>四二</li>
+					</ul>
+				</li>
+				<li>
+					<a href="">第五菜单</a>
+					<ul class="meau-kid">
+						<li>五一</li>
+						<li>五二</li>
+					</ul>
+				</li>
+			</ul>
+		</div>
+		
+	</nav>
+</body>
+</html>
