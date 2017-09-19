@@ -1,0 +1,378 @@
+html{color:#000;background-color:#fff}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}
+body{font-family: "微软雅黑";}
+a{text-decoration: none;}
+a{cursor: pointer;}
+a:hover{color: #008b56;}
+hr{color: #ccc;margin-top: 19px;width: 784px;margin-left: 0px;margin-bottom: 15px;}
+body{position: relative;}
+*{
+	margin:0;
+	padding: 0;
+}
+body{
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    line-height: 1.625;
+}
+a{
+	cursor: pointer;
+}
+.a{
+	display: none;
+	padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+a:hover{
+	color: #34BFBA;
+}
+header{
+	width: 100%;
+	height: 151px;
+}
+li{
+	list-style: none;
+}
+/* 文字根据页面缩小自动换行 */
+.word-wrap{
+	word-wrap: break-word;
+	display: block;
+	width: 100%;
+}
+header>div{
+	width: 50%;
+	float: left;
+	padding: 36px 0;
+	flex-direction: row;
+}
+.logo-box{
+	margin: auto auto;
+	height: 75px;
+	padding: 0 0 4px;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	flex-direction: column;
+	flex-grow: 1; 
+}
+.header-download{
+	flex-wrap: wrap;
+}
+.logo{
+	font-size: 36px;
+	color: #34BFBA;
+}
+.logo-down{
+	font-size: 16px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight: 300;
+	color: #aaa;
+	line-height: 1.5;
+}
+.header-download>div{
+	height: 61px;
+	width: 100%;
+	margin: auto auto;
+}
+.header-download>div>div{
+	font-size: 14px;
+	line-height: 1.5;
+	font-weight: 300;
+	width: 131px;
+	height: 61px;
+	float: left;
+}
+.video-down{
+	padding: 20px 22px;
+}
+/* header部分完毕 */
+nav{
+	background-color: #333333;
+	width: 100%;
+	/* height: 61px; */
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	flex-direction: column;
+	flex-grow: 1; 
+}
+.nav{
+	margin: 0 auto;
+	height: 61px;
+	margin: auto auto;
+}
+.nav-list{
+	font-size: 14px;
+	line-height: 1.5;
+	font-weight: 300;
+	height: 61px;
+	margin: 0 auto;
+}
+.nav-list>li{
+	text-align: center;
+	flex-wrap: wrap;
+    display: block;
+    float: left;
+    list-style: none;
+    padding-top: 10px;
+    color: #fff;
+    background-color: #333;
+}
+.nav-list{
+	list-style:none;
+	margin:0 auto;
+	display:-webkit-box;
+	display:-moz-box;
+	display:-ms-flexbox;
+	display:-webkit-flex;
+	display:flex;
+	-webkit-flex-flow:row wrap;
+}
+.nav-list a{
+	text-decoration:none;
+	display:block;
+	color:white;
+}
+.nav-list a:hover{
+	color: #34BFBA;
+}
+.nav-list a{
+	text-align:center;
+	padding:10px;
+}
+.nav-list li:last-of-type a{border-bottom:none}
+
+li{
+    
+}
+.a{
+    padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    display: none;
+    width: 100%;
+    text-align: center;
+}
+@media ( max-width: 520px ) {
+    .li{
+        width: 100%;
+        padding-bottom: 10px;
+        display: none;
+    }
+    nav{
+    	height: 61px;
+    }
+    .a{
+         display: block;
+    }
+    header{
+    	width: 100%;
+    }
+    .header-download>div>div{
+    	width: 100%;
+    }
+    .header-download{
+    	display: none;
+    }
+    .logo{
+    	font-size: 28px;
+    }
+    .logo-box{
+    	width: 100%;
+    	margin-left: 100px;
+    }
+    .logo-down{
+		letter-spacing: 0.2px;
+		font-size: 10px;
+    }
+    .banner{
+    	width: 100%;
+    	flex: 5;
+    }
+    .country{
+    	width: 100%;
+    }
+    .section-two{
+    	width: 100%;
+    }
+    section{
+    	margin-left: 10px;
+    }
+    .three-step{
+    	margin-left: 10px;
+    }
+    .section-three{
+    	margin-left: 80px;
+    	width: 100%;
+    }
+    .aboutus{
+    	width: 100%;
+    }
+    .grow-two{
+    	width: 100%；
+    }
+    .banner>ul>li>img{
+    	max-width: 250px;
+    }
+}
+@media screen ( min-width: 650px ){
+	li{
+        width: 132px;
+        padding-bottom: 10px;
+        display: block;
+    }
+    nav{
+    	height: 61px;
+    }
+}
+/* nav部分完成 */
+section{
+	margin-top: 45px;
+	width: 100%;
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.section-one{
+	font-weight: bold;
+	display: flex;
+	display: -webkit-flex;
+	justify-content: center;
+	align-items: center;
+	flex-grow: 1; 
+}
+.banner{
+	max-width: 100%;
+	height: 249px;
+	overflow: hidden;
+	margin: 0 auto;
+	position: relative;
+}
+.slider>li{
+	align-items: center;
+}
+.banner>ul>li>img{
+	float: left;
+	display: inline;
+	position: absolute;
+	width: 100%;
+	height: auto;
+}
+.grow-three{
+	flex-grow: 1;
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+}
+.country{
+	text-align: center;
+	margin: 45px auto;
+	padding: 0;
+	color: #777;
+	font-weight: 300;
+	line-height: 1.625;
+	width: 1140px;
+
+}
+.country>p{
+	margin-bottom: 45px;
+}
+.country>h1{
+	font-size: 30px;
+	line-height: 1.2;
+	font-weight: 700;
+	margin: 0 0 10px;
+	color: #333;
+}
+#border{
+	border-bottom: 1px solid #777;
+}
+.section-two{
+	width: 100%;
+	background-color: #f5f5f5;
+}
+.three-step{
+	/* margin: 45px 300px; */
+	/* height: 346px; */
+	display: flex;
+	display: -webkit-flex;
+	margin-top: 45px;
+	margin-bottom: 45px;
+	flex-wrap: wrap;
+	align-items: center;
+	justify-content: center;
+}
+.flex{
+	margin-right: 45px;
+	
+}
+.flexbox>div{
+	height: 280px;
+	width: 358px;
+	margin-right: 58px;
+	flex-grow: 1;
+	background-color: #fff;
+}
+.steps{
+	height: 56px;
+	padding: 10px 40px;
+	margin: 0;
+	line-height: 1.2;
+	color: #333;
+	font-weight: 700;
+	font-size: 16px;
+	box-sizing: border-box;
+}
+.section-three{
+	width: 100%;
+}
+.section-border{
+	border-bottom: 1px solid #ccc;
+}
+.section-border>span{
+	color: #777;
+	font-weight: 300;
+	line-height: 1.625;
+}
+.section-msg{
+	box-sizing: border-box;
+	display: block;
+	list-style-type: disc;
+}
+.section-msg>li{
+	border-bottom: 1px dotted #ececec;
+	margin-bottom: 10px;
+	padding-bottom: 10px;
+	color: #34bfba;
+}
+footer{
+	background-color: #fff;
+    border-top: 1px solid #ececec;
+    color: #aaa;
+    font-size: 12px;
+    letter-spacing: 1px;
+    padding: 40px 0;
+    text-align: center;
+    width: 100%;
+    text-transform: uppercase;
+}

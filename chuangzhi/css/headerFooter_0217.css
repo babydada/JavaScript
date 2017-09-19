@@ -1,0 +1,209 @@
+/* 公用样式 */
+html{color:#000;background:#FFF}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}
+legend{color:#000}
+a{text-decoration: none;}
+body{
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+/* 头部 */
+.headerBox{
+	height: 94px;
+	width: 100%;
+}
+.header{
+	width: 1200px;
+	height: 94px;
+	margin: 0 auto;
+}
+.header>ul{
+	width: 864px;
+	float: right;
+}
+.header>ul>li{
+	width: 144px;
+	float: left;
+	padding: 0 34px;
+	line-height: 80px;
+	box-sizing: border-box;
+	border-top: solid 10px #ffffff;
+	text-align: center;
+	position: relative;
+}
+.header>ul>li>a{ 
+	font-size: 18px;
+	color: #1a2c3c;
+ }
+.header>ul>.liHover{
+	border-top: solid 10px #1e3040;
+	font-weight: bolder;
+}
+.header>ul>li>ol{
+	width: 144px;
+	position: absolute;
+	top: 64px;
+	left: 0;
+	z-index: 10;
+	display: none;
+	background: #fff;
+}
+.header>ul>li>ol a{
+	font-size: 14px;
+	color: #1a2c3c;
+	font-weight: 500;
+}
+.header>ul>li>ol>li{
+	line-height: 44px;
+	font-size: 14px;
+}
+.header>ul>li:hover{
+	border-top: solid 10px #1e3040;
+	font-weight: bolder;
+}
+.header>ul>li:hover>ol{
+	display: block;
+}
+
+.bannerBox{
+	width: 1920px;
+	height: 524px;
+	position: relative;
+}
+.bannerBox .banner{
+	width: 1920px;
+	height: 524px;
+	background:  url(../images/banner1.jpg) 0 0 no-repeat;
+}
+.bannerBox .btL{
+	width: 60px;
+	height: 60px;
+	background:  url(../images/btn.png) 0 0 no-repeat;
+	margin-top: -30px;
+	position: absolute;
+	left: 70px;
+	top: 50%;
+	cursor: pointer;
+}
+.bannerBox .btR{
+	width: 60px;
+	height: 60px;
+	background:  url(../images/btn.png) -60px 0 no-repeat;
+	margin-top: -30px;
+	position: absolute;
+	right: 70px;
+	top: 50%;
+	cursor: pointer;
+}
+.bannerBox .btR:hover,.bannerBox .btL:hover{
+	opacity: 0.7;
+}
+.bannerBox .pinte{
+	width: 210px;
+	height: 16px;
+	position: absolute;
+	margin-left: -100px;
+	left: 50%;
+	bottom: 50px;
+}
+.bannerBox .pinte>li{
+	width: 14px;
+	height: 14px;
+	margin-left: 28px;
+	background-color: #ffffff;
+	float: left;
+	border-radius: 7px;
+	cursor: pointer;
+}
+.bannerBox .pinte>li:hover{
+	background-color: #1a2c3c;
+}
+.bannerBox .pinte .pinteHover{
+	background-color: #1a2c3c;
+}
+/* 头部完成 */
+
+
+footer{
+	margin-top: 83px;
+}
+footer .keyer{
+	width: 364px;
+	height: 88px;
+	border: 2px solid #1a2c3c;
+	margin: 0 auto 124px;
+	position: relative;
+}
+footer .keyer img{
+	position: absolute;
+	left: 182px;
+	margin-left: -73px;
+	top: -50px;
+}
+footer .keyer p{
+	position: absolute;
+	text-align: center;
+	width: 100%;
+	top: 116px;
+	color: #1a2c3c;
+}
+footer .footer{
+	width: 100%;
+	height: 154px;
+	box-sizing: border-box;
+	background-color: #abc5db;
+	padding-top: 44px;
+}
+.footer ul{
+	overflow: hidden;
+	width: 730px;
+	margin: 0 auto;
+}
+.footer ul li{
+	float: left;
+	height: 17px;
+	border-right: 1px solid #1a2c3c;
+}
+.footer ul li:last-child{border-right:none;}
+.footer ul li a{
+	font-size: 18px;
+	line-height: 17px;
+	padding: 0 36px;
+	color: #1a2c3c;
+}
+.footer p{
+	text-align: center;
+	padding: 26px 0;
+	font-size: 16px;
+	color: #1a2c3c;
+	border: 1px solid rgba(0, 0, 0, 0);
+}
+.footer p b{
+	display: inline-block;
+	position: relative;
+	margin-left: 54px;
+	top: 3px;
+	width: 20px;
+	height: 24px;
+}
+.footer p b:nth-child(1){
+	background:  url(../images/lconBottom.png) 0 0 no-repeat;
+	margin-left: 0;
+}
+.footer p b:nth-child(2){
+	background:  url(../images/lconBottom.png) 0 -24px no-repeat;
+}
+.footer p b:nth-child(3){
+	background:  url(../images/lconBottom.png) 0 -48px no-repeat;
+}

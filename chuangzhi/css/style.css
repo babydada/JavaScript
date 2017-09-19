@@ -1,0 +1,138 @@
+html{color:#000;background:#FFF}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}
+legend{color:#000}
+a{text-decoration: none;}
+body{
+	font-family: "微软雅黑";
+	font-size: 14px;
+}
+
+
+/*服务项目*/
+.heading{
+	display: inline-block;
+	border-top: 1px solid #1a2c3c;
+	border-bottom: 1px solid #1a2c3c;
+	margin:0 0 40px 912px;
+	line-height: 40px;
+	margin-top: 118px ;
+	padding: 0 10px;
+}
+section .project{
+	width: 1200px;
+	height: 500px;
+	margin: 0 auto;
+}
+section .project li{
+	padding: 70px 0 0 110px;
+	width: 300px;
+	height: 250px;
+	float: left;
+	box-sizing: border-box;
+	background: #abc5db;
+}
+.project li:nth-child(2),.project li:nth-child(4),.project li:nth-child(5),.project li:nth-child(7){
+	background: #d0dfed;
+}
+section .project li div{
+	margin: 7px;
+	width: 50px;
+	height: 32px;
+}
+section .project li:nth-child(1) div{
+	background:  url(../images/lcon.png) 0 0 no-repeat;
+}
+section .project li:nth-child(2) div{
+	background:  url(../images/lcon.png) -50px 0 no-repeat;
+}
+section .project li:nth-child(3) div{
+	background:  url(../images/lcon.png) -100px 0 no-repeat;
+}
+section .project li:nth-child(4) div{
+	background:  url(../images/lcon.png) -150px 0 no-repeat;
+}
+section .project li:nth-child(5) div{
+	background:  url(../images/lcon.png) 0 -32px no-repeat;
+}
+section .project li:nth-child(6) div{
+	background:  url(../images/lcon.png) -50px -32px no-repeat;
+}
+section .project li:nth-child(7) div{
+	background:  url(../images/lcon.png) -100px -32px no-repeat;
+}
+section .project li:nth-child(8) div{
+	background:  url(../images/lcon.png) -150px -32px no-repeat;
+}
+
+/*资讯*/
+.information{
+	width: 1200px;
+	height: 500px;
+	margin: 0 auto;
+}
+.information>div{
+	width: 547px;
+	height: 500px;
+	float: left;
+}
+.information>div:nth-child(2){
+	float: right;
+}
+.information>div h2{
+	width: 100%;
+	line-height: 46px;
+	text-align: center;
+	font-size: 18px;
+	color: #1a2c3c;
+	background: #abc5db;
+}
+.information>div ul{
+	height: 247px;
+}
+.information>div ul li{
+	list-style: 
+}
+.information>div ul li a{
+	line-height: 37px;
+	padding-left: 40px;
+	font-size: 16px;
+	color: #666666;
+}
+/*投资企业展示*/
+.company{
+	display: block;
+	margin: 0 auto;
+}
+
+.study{
+	width: 1200px;
+	height: 350px;
+	margin: 60px auto;
+}
+.study div{
+	float: left;
+	width: 400px;
+	line-height: 222px;
+	text-align: center;
+	border-radius: 15px;
+	background-color: #d0dfed;
+	font-size: 18px;
+	color: #1a2c3c;
+}
+.study div:nth-child(2){
+	background-color: #abc5db;
+	transform:scale(1.5); 
+	box-shadow: 0 0 10px #888888;
+}
+

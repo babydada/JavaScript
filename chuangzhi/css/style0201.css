@@ -1,0 +1,133 @@
+/*
+* @Author: lamco
+* @Date:   2017-02-28 12:32:13
+* @Last Modified by:   lamco
+* @Last Modified time: 2017-02-28 14:30:57
+*/
+
+.fl{float: left;}
+.fr{float: right;}
+a:hover{
+	color: #225079;
+}
+body{
+	font-family: "微软雅黑";
+}
+
+section{
+	width: 1200px;
+	margin: 0 auto;
+	position: relative;
+	top: -140px;
+	overflow: hidden;
+}
+.informHeader{
+	height: 60px;
+	background-color: rgba(255, 255,255, 0.6);
+	padding-left: 50px;
+}
+.informHeader p{
+	line-height: 60px;
+	font-size: 18px;
+	color: #1a2c3c;
+}
+.informHeader a{
+	margin-left: 5px;
+	color: #1a2c3c;
+}
+.informMenu{
+	width: 210px;
+	height: 342px;
+	background-color: #d0dfed;
+}
+.informMenu>div{
+	height: 80px;
+	line-height: 80px;
+	font-size: 18px;
+	color: #1a2c3c;
+	padding-left: 50px;
+	background: url(../images/pinter.png) 94px 0 no-repeat;
+}
+.informMenu ul li{
+	text-align: center;
+}
+.informMenu ul li:nth-child(1){
+	background-color: #abc5db;
+}
+.informMenu ul li:hover{
+	background-color: #abc5db;
+}
+.informMenu ul li a{
+	font-size: 16px;
+	color: #1a2c3c;
+	width: 100%;
+	line-height: 40px;
+}
+section .content{
+	width: 990px;
+	background-color: #fff;
+	padding: 27px 0 0 102px;
+	box-sizing: border-box;
+}
+section .content h1{
+	line-height: 93px;
+	font-size: 24px;
+	color: #666666;
+}
+section .content ul{
+	overflow: hidden;
+}
+section .content ul li{
+	margin-bottom: 40px;
+	overflow: hidden;
+}
+section .content ul li img{
+	width: 140px;
+	height: 114px;
+}
+section .content ul li div{
+	width: 640px;
+	margin-left: 32px;
+}
+section .content ul li div h2{
+	font-size: 20px;
+	color: #666666;
+	display: block;
+	line-height: 40px;
+	border-bottom: 1px dotted #999999;
+}
+section .content ul li div span{
+	font-size: 10px;
+	color: #999999;
+	line-height: 22px;
+}
+section .content ul li div p{
+	font-size: 14px;
+	color: #999999;
+	line-height: 17px;
+}
+section .content ol{
+	width: 400px;
+	margin: 0 auto;
+	overflow: hidden;
+}
+section .content ol li{
+	float: left;
+	width: 44px;
+	height: 46px;
+	border: 2px solid #999;
+	font-size: 14px;
+	line-height: 46px;
+	text-align: center;
+	color: #337ab7;
+	margin-left: 4px;
+	cursor: pointer;
+}
+section .content ol li:nth-child(2){
+	background-color: #607087;
+	color: #fff;
+}
+section .content ol li:hover{
+	background-color: #607087;
+	color: #fff;
+}

@@ -1,0 +1,154 @@
+html{color:#000;background:#FFF}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}
+legend{color:#000}
+#yui3-css-stamp.cssreset{display:none}
+header{
+	width: 1920px;
+	height: 620px;
+}
+section{
+	/*width: 1201px;*/
+	height: 700px;
+}
+
+.section-top{
+	width: 1201px;
+	height: 59px;
+	background-color: rgba(255,255,255,0.6);
+	color: #000;
+	font-size: 18px;
+	line-height: 55px;
+	position: absolute;
+	top: -59px;
+}
+.section-top>a{
+	text-decoration: none;
+	color: #000;
+}
+.section-aside{
+	width: 207px;
+	height: 320px;
+	background-color: rgb(208,223,237);
+}
+.section-center{
+	position: relative;
+	top: -81px;
+	height: 500px;
+}
+.section-world{
+	width: 767px;
+	height: 1300px;
+    position: relative;
+    line-height: 20px;
+    top: -320px;
+    left: 322px;
+}
+.section-center{
+	width: 1201px;
+	height: 1414px;
+	margin: 0 auto;
+	background-color: #fff;
+/*	position: absolute;
+	top: -140px;*/
+}
+.section-icbc{
+	width: 96px;
+	height: 25px;
+	margin-top: 54px;
+	margin-bottom: 36px;
+	font-size: 24px;
+}
+.section-page3{
+	margin-top: 17px;
+	margin-bottom: 18px;
+	width: 767px;
+	font-size: 16px;
+}
+.section-page1{
+	width: 767px;
+	font-size: 16px;
+}
+.section-page2{
+	width: 767px;
+	font-size: 16px;
+	margin-top: 17px;
+}
+.section-fuwu{
+	margin-top: 37px;
+	font-size: 24px;
+}
+.section-better{
+	margin-top: 16px;
+	font-size: 16px;
+}
+.section-yewu{
+	margin-top: 38px;
+	font-size: 24px;
+}
+.section-fiveneed{
+	margin-top: 17px;
+	font-size: 16px;
+}
+.section-area{
+	margin-top: 37px;
+	font-size: 24px;
+}
+.section-xxshi{
+	margin-top: 17px;
+	font-size: 16px;
+}
+.section-room{
+	margin-top: 37px;
+	font-size: 24px;
+}
+.section-chat{
+	margin-top: 17px;
+	font-size: 16px;
+}
+.section-aside-base{
+	width: 207px;
+	height: 79px;
+	background-color: rgb(208,223,237);
+	text-align: center;
+	line-height: 95px;
+}
+.section-aside-icbc{
+	width: 207px;
+	height: 40px;
+	background-color: rgb(171,197,219);
+	text-align: center;
+	line-height: 45px;
+}
+.section-aside-caishui{
+	width: 207px;
+	height: 40px;
+	background-color: rgb(208,223,237);
+	text-align: center;
+	line-height: 45px;
+}
+.section-aside-renshi{
+	width: 207px;
+	height: 83px;
+	background-color: rgb(208,223,237);
+	text-align: center;
+	line-height: 45px;
+	line-height: 55px;
+}
+footer{
+	width: 1920px;
+	height: 154px;
+	position: relative;
+	z-index: 2;
+	top: 370px;
+}

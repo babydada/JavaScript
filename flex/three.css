@@ -1,0 +1,103 @@
+html{color:#000;background:#ececec}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}
+body{font-family: "微软雅黑";}
+a{text-decoration: none;}
+a{cursor: pointer;}
+a:hover{color: #008b56;}
+hr{color: #ccc;margin-top: 19px;width: 784px;margin-left: 0px;margin-bottom: 15px;}
+body{position: relative;}
+*{
+	margin:0;
+	padding: 0;
+}
+body{
+	display: flex;
+	display: -webkit-flex;
+	flex-wrap: wrap;
+	justify-content: center;
+	font-family: 'Lato', sans-serif;
+    font-weight: 300;
+    line-height: 1.625;
+}
+a{
+	cursor: pointer;
+}
+.a{
+	display: none;
+	padding-top: 10px;
+    padding-bottom: 10px;
+    color: #fff;
+    width: 100%;
+    text-align: center;
+}
+a:hover{
+	color: #34BFBA;
+}
+.word-wrap{
+	word-wrap: break-word;
+}
+header{
+	width: 100%;
+	height: 151px;
+}
+li{
+	list-style: none;
+}
+
+header>div{
+	width: 50%;
+	float: left;
+	padding: 36px 0;
+	flex-direction: row;
+}
+.logo-box{
+	margin: auto auto;
+	height: 75px;
+	padding: 0 0 4px;
+	display: flex;
+	display: -webkit-flex;
+	align-items: center;
+	flex-direction: column;
+	flex-grow: 1; 
+}
+.header-download{
+	flex-wrap: wrap;
+}
+.logo{
+	font-size: 36px;
+	color: #34BFBA;
+}
+.logo-down{
+	font-size: 16px;
+	letter-spacing: 1px;
+	text-transform: uppercase;
+	font-weight: 300;
+	color: #aaa;
+	line-height: 1.5;
+}
+.header-download>div{
+	height: 61px;
+	width: 100%;
+	margin: auto auto;
+}
+.header-download>div>div{
+	font-size: 14px;
+	line-height: 1.5;
+	font-weight: 300;
+	width: 131px;
+	height: 61px;
+	float: left;
+}
+.video-down{
+	padding: 20px 22px;
+}

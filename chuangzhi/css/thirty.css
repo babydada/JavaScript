@@ -1,0 +1,177 @@
+html{color:#000;background:#FFF}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}
+legend{color:#000}
+#yui3-css-stamp.cssreset{display:none}
+header{
+	width: 1920px;
+	height: 620px;
+}
+footer{
+	width: 1920px;
+	height: 154px;
+}
+section{
+	height: 700px;
+}
+.thirty-section-top{
+	width: 1201px;
+	height: 59px;
+	background-color: rgba(255,255,255,0.6);
+	color: #000;
+	font-size: 18px;
+	line-height: 55px;
+	    position: absolute;
+    top: -59px;
+}
+.thirty-section-top>a{
+	text-decoration: none;
+	color: #000;
+}
+.thirty-section-aside{
+	width: 207px;
+	height: 320px;
+	background-color: rgb(208,223,237);
+}
+.thirty-section{
+	height: 1200px;
+	line-height: 20px;
+}
+.thirty-section-center{
+       position: relative;
+       left: 359px;
+       top: -81px;
+       height: 800px;
+       width: 1200px;
+       background-color: #fff;
+}
+.thirty-firstpage-img{
+	width: 172px;
+	height: 90px;
+	float: left;
+	position: absolute;
+	left: 580px;
+	top: 84px;
+}
+.thirty-secondpage-img{
+	width: 168px;
+	height: 62px;
+	float: left;
+	position: absolute;
+	left: 580px;
+	top: 380px;
+}
+.thirty-thirdpage-img{
+	width: 168px;
+	height: 82px;
+	float: left;
+	position: absolute;
+	left: 580px;
+	top: 600px;
+}
+.thirty-firstpage-world{
+	width: 547px;
+	height: 255px;
+	margin-top: 35px;
+	font-size: 18px;
+}
+.thirty-secondpage-world{
+	width: 547px;
+	height: 241px;
+	margin-top: 35px;
+	font-size: 18px;
+}
+.thirty-thirdpage-world{
+	width: 547px;
+	height: 89px;
+	margin-top: 46px;
+	font-size: 18px;
+}
+.thirty-section-caption{
+	height: 22px;
+	width: 98px;
+	font-size: 24px;
+}
+.thirty-section-world{
+	width: 727px;
+	height: 656px;
+	position: relative;
+	left: 344px;
+	top: -264px;
+    background-color: #fff;
+}
+.thirty-aside-one{
+	width: 207px;
+	height: 79px;
+	text-align: center;
+	line-height: 55px;
+}
+.thirty-aside-two{
+	width: 207px;
+	height: 41px;
+	text-align: center;
+	line-height: 35px;
+	background-color: rgb(171,197,219);
+}
+.thirty-aside-three{
+	width: 207px;
+	height: 202px;
+	text-align: center;
+	line-height: 45px;
+}
+.guanwang1{
+	width: 40px;
+	height: 20px;
+	color: #fff;
+	background-color: #000;
+	position: absolute;
+	top: 250px;
+}
+.guanwang2{
+	width: 40px;
+	height: 20px;
+	color: #fff;
+	background-color: #555;
+	position: absolute;
+	top: 600px;
+}
+.guanwang3{
+	width: 40px;
+	height: 20px;
+	color: #fff;
+	background-color: #555;
+	position: relative;
+	top: -10px;
+}
+.one-five ul li{
+	float: left;
+	border:1px solid #ccc;
+	width: 44px;
+	height: 44px;
+	line-height: 50px;
+	text-align: center;
+    margin-right: 4px;
+}
+.one-five ul{
+	position: absolute;
+	left: 915px;
+	top: 1560px;
+}
+.one-five ul li:hover{
+    background-color: rgb(208,223,237);
+    color: #fff;
+}
+footer{
+	position:relative;
+	top:370px;
+}

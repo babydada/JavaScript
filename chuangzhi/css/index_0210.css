@@ -1,0 +1,245 @@
+*{
+	margin: 0;
+	padding: 0;
+	font-family: "微软雅黑"；
+}
+html{color:#000;background:#FFF}
+body,div,dl,dt,dd,ul,ol,li,h1,h2,h3,h4,h5,h6,pre,code,form,fieldset,legend,input,textarea,p,blockquote,th,td{margin:0;padding:0}
+table{border-collapse:collapse;border-spacing:0}
+fieldset,img{border:0}
+address,caption,cite,code,dfn,em,strong,th,var{font-style:normal;font-weight:normal}
+ol,ul{list-style:none}
+caption,th{text-align:left}
+h1,h2,h3,h4,h5,h6{font-size:100%;font-weight:normal}
+q:before,q:after{content:''}
+abbr,acronym{border:0;font-variant:normal}
+sup{vertical-align:text-top}
+sub{vertical-align:text-bottom}
+input,textarea,select{font-family:inherit;font-size:inherit;font-weight:inherit;*font-size:100%}
+legend{color:#000}
+#yui3-css-stamp.cssreset{display:none}
+a{
+	text-decoration: none;
+}
+/*头部*/
+header{
+	width: 1920px;
+	height: 620px;
+	 margin: 0 auto;
+}
+section{
+	width: 1566px;
+	height: 840px;
+	position: relative;
+	top: -140px;
+	/*border:1px solid #f00;*/
+	margin-left: 363px;
+}
+.top{
+	width: 1051px;
+	height: 39px;
+	background-color: rgba(255,255,255,0.5);
+	color: #1a2c3c;
+	font-size: 18px;
+	padding-top: 24px;
+	padding-left: 50px;
+}
+.top+div{
+	width: 100%;
+}
+/*左侧导航*/
+.nav{
+	width: 206px;
+	height: 322px;
+	background: #d0dfed;
+	float: left;
+}
+.nav>ul>li{
+	color: #f00;
+	width: 136;
+	height: 29px;
+	padding-left: 70px;
+	padding-top: 13px;
+	/*text-align: center;*/
+}
+.nav>ul>li>a{
+	font-size: 14px;
+	color: #f00;
+}
+.nav>ul>li:nth-child(1){
+	height: 45px;
+	padding-left: 50px;
+	padding-top: 30px;
+	background-image: url(../images/xia.png);
+	background-repeat: no-repeat;
+	background-position: 130px 36px;
+}
+.nav>ul>li:nth-child(1)>a{
+	font-size: 18px;
+	color: #1a2c3c;
+}
+.nav>ul>li:nth-child(2){
+	background: #abc5db;
+}
+.nav+div{
+	width: 770px;
+	height: 778px;
+	/*border: 1px solid #f00;*/
+	float: left;
+}
+/*导航右侧*/
+.section{
+	width: 770px;
+	background: #fff;
+	padding-left: 125px;
+}
+.section_div1{
+	width: 770px;
+	height: 60px;
+	padding-top: 56px;
+}
+.section_div1>a{
+	font-size: 24px;
+	color: #666;
+	background: #fff;
+}
+.section_div2{
+	width: 770px;
+	height: 45px;
+	background: #d0dfed;
+}
+.section_div2 li{
+	float: left;
+	margin-top: 15px;
+	font-size: 16px;
+}
+.section_div2 li:nth-child(2n+1){
+	margin-left: 12px;
+}
+.section_div2 li:nth-child(7){
+	margin: 0;
+}
+/*按钮*/
+.section_div2 button{
+	width: 80px;
+	height: 38px;
+	color: #fff;
+	background-color: #466682;
+	border: 0;
+	margin-left: 28px;margin-top: 3px;
+}
+/*输入框*/
+.action1 input{
+	width: 160px;
+	background-image: url(../images/xia.png);
+	background-repeat: no-repeat;
+	background-position: 145px 5px;
+}
+.action2 input{
+	width: 90px;
+	background-image: url(../images/xia.png);
+	background-repeat: no-repeat;
+	background-position: 75px 5px;
+}
+.action3 input{
+	width: 160px;
+	background-image: url(../images/xia.png);
+	background-repeat: no-repeat;
+	background-position: 145px 5px;
+}
+/*截止时间*/
+.section3{
+	width: 770px;
+	height: 670px;
+	margin-top: 20px;
+	border: 1px solid #cecece;
+}
+.section3>p{
+	height: 30px;
+	font-size: 18px;
+	color: #666;
+	padding-top: 15px;
+	padding-left: 12px;
+}
+#section1{
+	width: 222px;
+	float: left;
+	text-align: center;
+	margin-right: 5px;
+}
+#section1 li:nth-child(1){
+	height: 25px;
+	background: #d0dfed;
+	font-size: 14px;
+	color: #666;
+}
+#section2{
+	width: 161px;
+	float: left;
+	text-align: center;
+	margin-right: 5px;
+}
+#section1 li{
+	padding-top: 11px;
+}
+#section2 li{
+	padding-top: 11px;
+}
+#section3 li{
+	padding-top: 11px;
+}
+#section4 li{
+	padding-top: 11px;
+}
+#section2 li:nth-child(1){
+	height: 25px;
+	background: #d0dfed;
+	font-size: 14px;
+	color: #666;
+}
+/*截止时间部分*/
+#section3{
+	width: 227px;
+	float: left;
+	text-align: center;
+	margin-left: 5;
+}
+#section3 li:nth-child(1){
+	height: 25px;
+	background: #d0dfed;
+	font-size: 14px;
+	color: #666;
+}
+/*我要申请*/
+#section4{
+	width: 145px;
+	float: left;
+	text-align: center;
+	margin-left: 5px;
+}
+#section4 li:nth-child(1){
+	height: 25px;
+	background: #d0dfed;
+	font-size: 14px;
+	color: #666;
+}
+#section4 li:nth-child(1)~li{
+	font-size: 14px;
+	color: #666;
+	margin-top: 8px;
+}
+#section1 li:nth-child(1)~li{
+	font-size: 14px;
+	color: #666;
+	margin-top: 8px;
+}
+#section2 li:nth-child(1)~li{
+	font-size: 14px;
+	margin-top: 8px;
+	color: #666;
+}
+#section3 li:nth-child(1)~li{
+	font-size: 14px;
+	margin-top: 8px;
+	color: #666;
+}
